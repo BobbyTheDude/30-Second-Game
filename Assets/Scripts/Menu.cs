@@ -5,9 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public int MazeChoice;
+    private void Start()
+    {
+        MazeChoice = Random.Range(1, 4);
+    }
     public void Play()
     {
-        SceneManager.LoadScene("Maze1");
+        if (MazeChoice == 1)
+        {
+            SceneManager.LoadScene("Maze1");
+        }
+        if (MazeChoice == 2)
+        {
+            SceneManager.LoadScene("Maze2");
+        }
+        if (MazeChoice == 3)
+        {
+            SceneManager.LoadScene("Maze3");
+        }
     }
     public void MainMenu()
     {
